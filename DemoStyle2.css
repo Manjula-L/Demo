@@ -1,0 +1,12 @@
+.element{
+    transition: 5s;
+}
+.element:hover{
+    width: 10px;
+    height:10px;
+    background-color: blue;
+    transition:ease-in-out;
+    transition: 5s;
+    border-radius: 50%;
+    border:5px solid wheat;
+}

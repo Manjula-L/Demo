@@ -1,0 +1,57 @@
+<!-- Dom-Document OBject Model -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <i><u>para1</u></i>
+    <p id="id1"></p>
+    <img id="image1" /><br>
+        <i><u>para2</u></i>
+    <p id="id2">This <i><u>para2</u></i> is from text content</p>
+    <p id="id3"><i><u>para3</u></i>This text from para3</p>
+<!-- Event -->
+    <button type="button" onclick="x.style.color='red'">click</button>
+    <button id="bt1">clickme</button>
+   
+   <p id="ep">
+   <p id="ep1"></p>
+   <script>
+        //content was added into <p> by js using innerHTML
+        document.getElementById("id1").innerHTML="Welcome! This is DOM para 1";
+        //image was added in webpage using .src attribute
+        document.getElementById("image1").src="nature.jpg"
+        const x=document.getElementById("id1");
+      //  x.innerHTML="Content overridden using second innerHTML"
+      //Displaying Text Content 
+      let textc=document.getElementById("id2").textContent;
+      //Adding Text Content
+      //content in "id2" are appended to "id3" using append
+       document.getElementById("id3").append(textc)
+       //Adding text using concatination method
+       var y=document.getElementById("id2");
+       y.textContent +="NewText"
+      console.log(textc);
+      //QuerySelectors
+      let query=document.querySelectorAll("p");
+      console.log(query[0].textContent);
+      query[0].innerHTML="query[0] changed using query Selector";
+      //EventListener
+      var eve=document.getElementById("bt1");
+      eve.addEventListener("click",function1());
+      eve.addEventListener("click",function2());
+      function function1(){
+        eve.innerHTML="EventListner";
+
+      }
+      function function2(){
+        document.getElementById("ep1").innerHTML="Welcome to EventListener"
+        
+      }
+    </script>    
+    </body>
+</html>

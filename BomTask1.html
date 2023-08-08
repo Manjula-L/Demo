@@ -1,0 +1,28 @@
+<!-- check Admin or User in BOM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin alert</title>
+</head>
+<body>
+    <p id="admin"></p>
+    <script>
+       let x= window.confirm("Are You Admin");
+        console.log(x);
+        function func(){
+            if(x==1){
+                document.getElementById("admin").innerHTML="Hello Admin!!!"
+            }
+          else
+            {
+            document.getElementById("admin").innerHTML="Hello User welcome!!!"
+             }
+            }
+        func();
+
+    </script>
+    
+</body>
+</html>

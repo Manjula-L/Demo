@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetMethod</title>
+</head>
+<body>
+    <p id="titl"></p>
+    <script>
+        function json1(){
+
+           let response= fetch("https://jsonplaceholder.typicode.com/posts/3")
+            //console.log(response)
+            .then((response)=>response.json())
+            //.then((json)=>console.log(json))
+            .then((json)=>console.log("Title:",json.title,"\nId:",json.id))
+            //.then((json)=>console.log(json.userId))
+        }
+                       
+        document.getElementById("titl").innerHTML=json1();
+
+    </script>
+</body>
+</html>

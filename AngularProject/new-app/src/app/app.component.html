@@ -1,0 +1,10 @@
+<h1>This is from ParentComponent</h1>
+<p><i>One way Binding</i></p>
+<input value="message"/>
+<p><i>TwoWayBinding</i></p>
+<input value="name" [ngModel]="name" (ngModelChange)="onValueChange($event)"/>
+<p>{{name}}</p>
+<div *ngIf="hide">
+<app-child [name]="name" (valueThis)="getData($event)"></app-child>
+<p>{{nameFromChild}}</p>
+</div>
